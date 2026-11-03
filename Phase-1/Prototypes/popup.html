@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SkipSpeed</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <output id="readout" for="speed">1×</output>
+
+    <label class="visually-hidden" for="speed">Video speed</label>
+    <input id="speed" type="range" min="0.25" max="4.5" step="0.05" value="1" />
+
+    <div id="presets" role="group" aria-label="Speed presets"></div>
+
+    <label class="switch">
+      <span>Skip YouTube ads</span>
+      <input id="autoSkip" type="checkbox" role="switch" checked />
+    </label>
+    <p id="count"></p>
+
+    <dl>
+      <div><dt>Faster</dt><dd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>.</kbd></dd></div>
+      <div><dt>Slower</dt><dd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>,</kbd></dd></div>
+      <div><dt>Normal</dt><dd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>0</kbd></dd></div>
+    </dl>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
